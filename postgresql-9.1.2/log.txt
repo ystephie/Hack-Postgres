@@ -1,0 +1,23 @@
+LOG:  database system was shut down at 2012-04-20 04:15:38 UTC
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+ERROR:  extension "pg_trgm" does not exist
+STATEMENT:  DROP EXTENSION pg_Trgm;
+ERROR:  relation "restaurantaddress" does not exist at character 22
+STATEMENT:  select count(*) from restaurantaddress ra, restaurantphone rp where ra.name = rp.name;
+ERROR:  table "restaurantphone" does not exist
+STATEMENT:  DROP TABLE public.restaurantphone;
+ERROR:  table "restaurantaddress" does not exist
+STATEMENT:  DROP TABLE public.restaurantaddress;
+ERROR:  table "addressphone" does not exist
+STATEMENT:  DROP TABLE public.addressphone;
+ERROR:  cannot drop schema public because other objects depend on it
+DETAIL:  extension pg_trgm depends on schema public
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+STATEMENT:  DROP SCHEMA public;
+ERROR:  schema "public" already exists
+STATEMENT:  CREATE SCHEMA public;
+LOG:  received smart shutdown request
+LOG:  autovacuum launcher shutting down
+LOG:  shutting down
+LOG:  database system is shut down
